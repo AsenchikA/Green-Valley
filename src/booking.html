@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Бронирование</title>
+</head>
+<body>
+	<header class="page-header">
+		<div class="page-header__inner">
+			<a href="" class="header-logo"></a>
+			<nav class="main-nav">
+				<ul class="main-nav__list">
+					<li class="main-nav__item  main-nav__item--active"><a href="" class="main-nav__link">номера</a></li>
+					<li class="main-nav__item"><a href="" class="main-nav__link">коттедж</a></li>
+					<li class="main-nav__item"><a href="" class="main-nav__link">ресторан</a></li>
+					<li class="main-nav__item"><a href="" class="main-nav__link">отдых</a></li>
+					<li class="main-nav__item"><a href="" class="main-nav__link">контакты</a></li>
+				</ul>
+				<span class="main-nav__burger"></span>
+			</nav>
+			<div class="page-header__contacts">
+				<a href="" class="page-header__phone">+7 812 777-55-88</a>
+				<div class="page-header__address">г. Санкт-Петербург, Приморское ш.600</div>
+			</div>
+			<a href="" class="btn btn--orange">Забронировать</a>
+		</div>
+	</header>
+	<main>
+		<div class="booking-description">
+			<div class="booking-description__inner">
+				<h1 class="booking-description__title">Бронирование</h1>
+				<div class="booking-description__text">
+					<p>
+					Чтобы забронировать номер в отеле или коттедже, заполните форму ниже или просто позвоните по телефону: <span class="booking-description__phone">+7 812 777-55-88</span>
+					</p>
+				</div>
+			</div>
+		</div>
+		<form action="" class="booking-form">
+			<div class="booking-form__step">
+				<div class="booking-form__inner">
+					<div class="booking-form__number-step">шаг 1</div>
+					<h3 class="booking-form__title">Дата отдыха</h3>
+					<div class="booking-form__date">
+						<div class="booking-form__entry">
+							<h4 class="booking-form__subtitle">дата въезда</h4>
+							<input type="text" placeholder="ДД" class="booking-form__date-item">
+							<input type="text" placeholder="ММ" class="booking-form__date-item">
+							<input type="text" placeholder="ГГ" class="booking-form__date-item">
+						</div>
+						<div class="booking-form__exit">
+							<h4 class="booking-form__subtitle">дата выезда</h4>
+							<input type="text" placeholder="ДД" class="booking-form__date-item">
+							<input type="text" placeholder="ММ" class="booking-form__date-item">
+							<input type="text" placeholder="ГГ" class="booking-form__date-item">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="booking-form__step">
+				<div class="booking-form__inner">
+					<div class="booking-form__number-step">шаг 2</div>
+					<h3 class="booking-form__title">Место проживания</h3>
+					<div class="booking-form__place">
+						<input type="radio" class="booking-form__place-item">
+						<input type="radio" class="booking-form__place-item">
+					</div>
+				</div>
+			</div>
+			<div class="booking-form__step">
+				<div class="booking-form__inner">
+					<div class="booking-form__number-step">шаг 3</div>
+					<h3 class="booking-form__title">Тип коттеджа</h3>
+					<div class="booking-form__type">
+						<input type="radio" class="booking-form__place-item">
+						<input type="radio" class="booking-form__place-item">
+						<input type="radio" class="booking-form__place-item">
+						<input type="radio" class="booking-form__place-item">
+						<input type="radio" class="booking-form__place-item">
+					</div>
+				</div>
+			</div>
+			<div class="booking-form__step">
+				<div class="booking-form__inner">
+					<div class="booking-form__number-step">шаг 4</div>
+					<h3 class="booking-form__title">Персональная информация</h3>
+					<div class="booking-form__person">
+						<input type="text" placeholder="имя" class="booking-form__person-item">
+						<input type="text" placeholder="фамилия" class="booking-form__person-item">
+						<input type="text" placeholder="номер телефона" class="booking-form__person-item"> 
+						<div class="booking-form__description">
+							<p>Мы свяжемся с Вами в случае необходимости</p>
+						</div>
+						<input type="text" placeholder="e-mail" class="booking-form__person-item">
+						<div class="booking-form__description">
+							<p>На этот адрес мы вышлем Вам подтверждение о забронированном номере</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="booking-form__step">
+				<div class="booking-form__inner">
+					<div class="booking-form__number-step">шаг 5</div>
+					<h3 class="booking-form__title">Способ оплаты</h3>
+					<div class="booking-form__pay">
+						<div class="booking-form__pay-total">
+							<h4 class="booking-form__pay-title">к оплате</h4>
+						</div>
+						<div class="booking-form__pay-ways">
+							<div class="booking-form__pay-now">
+								<input type="radio" class="">
+								<h4 class="booking-form__pay-title">по приезду</h4>
+								<div class="booking-form__pay-description">
+									<p>Вы можете произвести оплату по факту заселения</p>
+								</div>
+							</div>
+							<div class="booking-form__pay-later">
+								<input type="radio" class="">
+								<h4 class="booking-form__pay-title">сейчас</h4>
+								<div class="booking-form__pay-description">
+									<p>Прямо сейчас Вы можете произвести оплату с помощью банковской карты.</p>
+								</div>
+								<label class="booking-form__pay-info">
+									номер карты <br />
+									<input type="text" placeholder="0000-0000-0000-0000">
+								</label>
+								<label class="booking-form__pay-info">
+									код cvv <br />
+									<input type="text" placeholder="123">
+								</label>
+								<label class="booking-form__pay-info">
+									фамилия владельца карты <br />
+									<input type="text" placeholder="vladimir vladimirov">
+								</label>
+								<label class="booking-form__pay-info">
+									действует до <br />
+									<input type="text" placeholder="01/2018">
+								</label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="booking-form__inner">
+				<a href="" class="btn btn--green">забронировать</a>
+			</div>
+		</form>
+	</main>
+	<footer class="page-gooter">
+		<div class="page-gooter__inner">
+			<div class="page-gooter__address">г. Санкт-Петербург, Приморское ш.600</div>
+			<div class="logo-and-social">
+				<a href="" class="footer-logo"></a>
+				<ul class="social-list">
+					<li class="social__item"></li>
+					<li class="social__item"></li>
+					<li class="social__item"></li>
+				</ul>
+			</div>
+			<div class="page-gooter__contacts">+7 812 777-55-88 info@greenvalley.ru</div>
+		</div>
+	</footer>
+</body>
+</html>
