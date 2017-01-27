@@ -1,4 +1,16 @@
-@import 'variables.less';
+// @import 'variables.less';
 
-@import 'global.less';
-@import 'blocks/page-header.less';
+// @import 'global.less';
+// @import 'blocks/page-header.less';
+
+.page-header{
+	background-color: pink;
+	padding: 1em;
+
+	&__inner {
+		background-color: black;
+	}
+}
+	.mixin {
+		.page-header();
+	}

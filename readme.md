@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Epic starter kit
 
 Стартовый репозиторий для моих студентов.
@@ -48,3 +49,5 @@ npm i # доустанавливаем зависимости проекта, е
 node_modules/.bin/ttf2woff src/fonts/opensans.ttf src/fonts/opensans.woff # конверсия TTF → WOFF, указаны адреса исходного TTF и результирующего WOFF
 cat src/fonts/opensans.ttf | node_modules/.bin/ttf2woff2 >> src/fonts/opensans.woff2 # конверсия TTF → WOFF2, указаны адреса исходного TTF и результирующего WOFF2
 ```
+=======
+
