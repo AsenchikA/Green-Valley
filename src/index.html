@@ -6,12 +6,13 @@
   <meta name="descriprion" content="Отдых на берегу Финского залива на базе отдыха Green Valley">
   <title>Современная база отдыха Green Valley</title>
   <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500|PT+Serif&amp;subset=cyrillic" rel="stylesheet">
+
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header class="page-header">
     <div class="page-header__inner">
-      <a href="#" class="logo"><img src="img/logo.png" alt=""></a>
+      <a href="" class="logo"><img src="img/logo.png" alt=""></a>
       <nav class="main-nav" id="main-nav">
         <ul class="main-nav__list">
           <li class="main-nav__item  main-nav__item--active"><a href="" class="main-nav__link">номера</a></li>
@@ -25,30 +26,32 @@
         <a href="" class="header-contacts__phone">+7 812 777-55-88</a>
         <div class="header-contacts__address">г. Санкт-Петербург, Приморское ш.600</div>
       </div>
-      <div class="reserve"><a href="" class="btn btn--calendar btn--orange btn--oval">Забронировать</a></div>
+      <div class="header-reserve"><a href="" class="btn btn--calendar btn--orange btn--oval">Забронировать</a></div>
       <a href="" class="toggler" id="toggler"><span></span></a>
     </div>
   </header>
   <main>
     <div class="promo">
-      <div class="promo-slider">
-        <section class="promo-slider__item">
+      <div class="promo-slider" id="promo-carousel">
+        <section class="promo-slider__item promo-slider__item--family">
           <div class="promo-slider__inner">
-            <div class="promo-slider__slogan">Семейный отдых на берегу Финского залива</div>
+            <span class="promo-slider__slogan">Семейный отдых на берегу Финского залива</span>
             <h1 class="promo-slider__title">Green Valley - это современная база отдыха в курортном районе для здорового отдыха всей семьёй.</h1>
           </div>
         </section>
-        <section class="promo-slider__item">
+        <section class="promo-slider__item promo-slider__item--company">
           <div class="promo-slider__inner">
-            <h2 class="promo-slider__title"></h2>
-            <div class="promo-slider__text"><p></p></div>
+            <span class="promo-slider__slogan">Семейный отдых на берегу Финского залива</span>
+            <h1 class="promo-slider__title">Green Valley - это современная база отдыха в курортном районе для здорового отдыха всей семьёй.</h1>
           </div>
         </section>
       </div>
-      <ul class="promo-tabs">
-        <li class="promo-tabs__item">семейный отдых</li>
-        <li class="promo-tabs__item">корпоративный</li>
-      </ul>
+      <div class="promo-tabs">
+          <ul class="promo-tabs__inner">
+            <li class="promo-tabs__item">семейный отдых</li>
+            <li class="promo-tabs__item">корпоративный</li>
+          </ul>
+      </div>
       <div class="promo-description">
         <section class="promo-description__item">
           <h2 class="promo-description__title">Здоровый отдых</h2>
@@ -56,15 +59,15 @@
             <p>Плавайте в бассейне, играйте в волейбол, футбол и другие игры. Устройте семейный пикник с шашлыками или снимите напряжение в бане или спа. Почувствуйте отдых!</p>
           </div>
           <ul class="promo-description__capabilities-list">
-            <li class="promo-description__capabilities-item"></li>
-            <li class="promo-description__capabilities-item"></li>
-            <li class="promo-description__capabilities-item"></li>
-            <li class="promo-description__capabilities-item"></li>
-            <li class="promo-description__capabilities-item"></li>
-            <li class="promo-description__capabilities-item"></li>
+            <li class="promo-description__capabilities-item"><img src="img/capability-1.png" alt="" class="promo-description__capabilities-img"><span class="promo-description__capabilities-text">бассейн</span></li>
+            <li class="promo-description__capabilities-item"><img src="img/capability-2.png" alt="" class="promo-description__capabilities-img"><span class="promo-description__capabilities-text">спортивная площадка</span></li>
+            <li class="promo-description__capabilities-item"><img src="img/capability-3.png" alt="" class="promo-description__capabilities-img"><span class="promo-description__capabilities-text">бильярд</span></li>
+            <li class="promo-description__capabilities-item"><img src="img/capability-4.png" alt="" class="promo-description__capabilities-img"><span class="promo-description__capabilities-text">спа</span></li>
+            <li class="promo-description__capabilities-item"><img src="img/capability-5.png" alt="" class="promo-description__capabilities-img"><span class="promo-description__capabilities-text">бани</span></li>
+            <li class="promo-description__capabilities-item"><img src="img/capability-6.png" alt="" class="promo-description__capabilities-img"><span class="promo-description__capabilities-text">анимация</span></li>
           </ul>
         </section>
-        <section class="promo-description__item">
+        <!-- <section class="promo-description__item">
           <h2 class="promo-description__title"></h2>
           <div class="promo-description__text">
             <p></p>
@@ -77,27 +80,21 @@
             <li class="promo-description__capabilities-item"></li>
             <li class="promo-description__capabilities-item"></li>
           </ul>
-        </section>
+        </section> -->
       </div>
       <div class="promo-gallery">
         <div class="promo-gallery__inner">
           <div class="promo-gallery__big">
-            <ul class="promo-gallery__selection">
-              <li class="promo-gallery__selection-item promo-gallery__selection-item--active"><img src="" alt=""></li>
-              <li class="promo-gallery__selection-item"><img src="" alt=""></li>
-              <li class="promo-gallery__selection-item"><img src="" alt=""></li>
-              <li class="promo-gallery__selection-item"><img src="" alt=""></li>
-              <li class="promo-gallery__selection-item"><img src="" alt=""></li>
-              <li class="promo-gallery__selection-item"><img src="" alt=""></li>
-            </ul>
+            <img src="img/gallery--1.jpg" alt="Номер в отеле Green Valley" id="promo-gallery-main">
           </div>
-          <ul class="promo-gallery__list">
-            <li class="promo-gallery__item"><img src="" alt=""></li>
-            <li class="promo-gallery__item"><img src="" alt=""></li>
-            <li class="promo-gallery__item"><img src="" alt=""></li>
-            <li class="promo-gallery__item"><img src="" alt=""></li>
-            <li class="promo-gallery__item"><img src="" alt=""></li>
-            <li class="promo-gallery__item"><img src="" alt=""></li>
+          <ul class="promo-gallery__list" id="promo-thumbs">
+            <li class="promo-gallery__item"><a href=""><img src="http://placehold.it/240x150" alt=""></a></li>
+            <li class="promo-gallery__item"><a href=""><img src="http://placehold.it/240x150" alt=""></a></li>
+            <li class="promo-gallery__item"><a href=""><img src="http://placehold.it/240x150" alt=""></a></li>
+            <li class="promo-gallery__item"><a href=""><img src="http://placehold.it/240x150" alt=""></a></li>
+            <li class="promo-gallery__item"><a href=""><img src="http://placehold.it/240x150" alt=""></a></li>
+            <li class="promo-gallery__item"><a href=""><img src="http://placehold.it/240x150" alt=""></a></li>
+            <li class="promo-gallery__item"><a href=""><img src="http://placehold.it/240x150" alt=""></a></li>
           </ul>
         </div>
       </div>
@@ -200,9 +197,6 @@
       <div class="page-footer__contacts">+7 812 777-55-88 info@greenvalley.ru</div>
     </div>
   </footer>
-<!-- <script src="js/jquery-3.1.1.min.js"></script> -->
-<!-- <script src="js/jquery-migrate-1.4.1.min.js"></script> -->
-<!-- <script src="js/jquery.bxslider.min.js"></script> -->
-<script src="./js/script.min.js"></script>
+  <script src="./js/script.min.js"></script>
 </body>
 </html>

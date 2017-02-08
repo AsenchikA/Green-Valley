@@ -1,0 +1,88 @@
+// Для импорта в диспетчер подключений: @import './src/less/blocks/promo-slider.less';
+
+
+.promo-slider {
+  &__item{
+    padding: 20px 0;
+    min-height: 320px;
+
+    &--family{
+
+        background: url('../img/promo-gallery--family-xs.jpg') no-repeat;
+        background-size: cover;
+
+
+      @media (min-width: @screen-sm){
+        .row;
+        padding: 20px;
+        background: url('../img/promo-gallery--family-sm.jpg') no-repeat;
+        background-size: cover;
+      }
+
+      @media (min-width: @screen-lg){
+        padding-top: 90px;
+        min-height: 430px;
+        background: url('../img/promo-gallery--family-sm.jpg') no-repeat;
+        background-size: cover;
+      }
+    }
+  }
+
+  &__inner{
+    margin: 0 auto;
+
+     @media (min-width: @screen-sm){
+        .col-(12);
+      }
+
+      @media (min-width: @screen-lg){
+        .col-(6);
+        .col-offset-(1);
+      }
+  }
+
+  &__slogan{
+    display: block;
+    font-family: @serif;
+    font-weight: build;
+    font-size: @accent-size;
+    padding: 10px 7px;
+    text-align: center;
+    background-color: @gray-lighter;
+    opacity: 0.9;
+
+    @media (min-width: @screen-sm){
+      display: inline;
+      text-align: left;
+      font-size: @h1-size;
+
+    }
+
+    @media (min-width: @screen-lg){
+    }
+  }
+
+  &__title{
+    font-family: @fira-sans;
+    font-weight: lighter;
+    font-size: @text-size;
+    padding: 12px 4px;
+    margin-top: 0;
+    text-align: center;
+    background-color: @gray-lighter;
+    opacity: 0.9;
+
+    @media (min-width: @screen-sm){
+      .col-(12);
+      margin-top: 24px;
+      text-align: left;
+      font-size: @accent-size;
+    }
+
+    @media (min-width: @screen-lg){
+      .col-(6);
+
+
+    }
+  }
+}

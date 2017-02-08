@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
   <meta name="descriprion" content="Номер Эконом на базе отдыха Green Valley">
   <title>Купить номер Эконом в Санкт-Петербурге, Green Valley</title>
   <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500|PT+Serif&amp;subset=cyrillic" rel="stylesheet">
@@ -10,8 +11,8 @@
 <body>
   <header class="page-header">
     <div class="page-header__inner">
-      <a href="" class="logo"></a>
-      <nav class="main-nav">
+      <a href="index.html" class="logo"><img src="img/logo.png" alt=""></a>
+      <nav class="main-nav" id="main-nav">
         <ul class="main-nav__list">
           <li class="main-nav__item  main-nav__item--active"><a href="" class="main-nav__link">номера</a></li>
           <li class="main-nav__item"><a href="" class="main-nav__link">коттедж</a></li>
@@ -19,13 +20,13 @@
           <li class="main-nav__item"><a href="" class="main-nav__link">отдых</a></li>
           <li class="main-nav__item"><a href="" class="main-nav__link">контакты</a></li>
         </ul>
-        <span class="main-nav__burger"></span>
       </nav>
       <div class="header-contacts">
         <a href="" class="header-contacts__phone">+7 812 777-55-88</a>
         <div class="header-contacts__address">г. Санкт-Петербург, Приморское ш.600</div>
       </div>
-      <div class="reserve"><a href="" class="btn btn--orange btn--oval">Забронировать</a></div>
+      <div class="header-reserve"><a href="" class="btn btn--calendar btn--orange btn--oval">Забронировать</a></div>
+      <a href="" class="toggler" id="toggler"><span></span></a>
     </div>
   </header>
   <main>
@@ -33,6 +34,10 @@
       <div class="room-single__inner">
         <h1 class="room-single__title">Эконом</h1>
         <p class="room-single__price">от <span class="room-single__number">3400</span> руб./сутки</p>
+        <div class="room-gallery">
+          <div class="room-gallery__item"><img src="" alt=""></div>
+          <div class="room-gallery__item"><img src="" alt=""></div>
+        </div>
         <div class="room-info">
           <h3 class="room-info__title">О номере</h3>
           <div class="room-info__text">
@@ -62,11 +67,7 @@
             </ul>
           </div>
         </div>
-        <div class="room-gallery">
-          <div class="room-gallery__item"><img src="" alt=""></div>
-          <div class="room-gallery__item"><img src="" alt=""></div>
-        </div>
-        <a href="" class="btn btn--orange"></a>
+        <div class="reserve"><a href="" class="btn btn--calendar btn--orange btn--oval">Забронировать</a></div>
         <div class="room-single__price">от <span class="room-single__number">3400</span> руб./сутки</div>
       </div>
     </div>
@@ -112,5 +113,6 @@
       <div class="page-footer__contacts">+7 812 777-55-88 info@greenvalley.ru</div>
     </div>
   </footer>
+  <script src="./js/script.min.js"></script>
 </body>
 </html>

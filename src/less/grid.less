@@ -1,7 +1,7 @@
 .row() {
   box-sizing: border-box;
-  margin-left: -20px;
-  margin-right: -20px;
+  margin-left: -10px;
+  margin-right: -10px;
 
   display: flex;
   justify-content: space-between;
@@ -9,6 +9,8 @@
 
 .col-(@n) {
   flex-basis: @n / 12 * 100%;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .col-offset-(@n) {

@@ -1,0 +1,27 @@
+// Для импорта в диспетчер подключений: @import './src/less/blocks/promo-tabs.less';
+
+
+.promo-tabs {
+  text-transform: uppercase;
+  font-size: @small-size;
+
+  &__inner{
+    .row;
+    padding: 15px 20px;
+    list-style: none;
+    text-align: center;
+
+    @media (min-width: @screen-sm){
+      justify-content: center;
+    }
+  }
+
+  &__item{
+    .col-(6);
+
+    @media (min-width: @screen-lg){
+      .col-(2);
+    }
+
+  }
+}
