@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+@@include('img/sprite-svg.svg')
   <header class="page-header">
     <div class="page-header__inner">
       <a href="" class="logo"><img src="img/logo.png" alt=""></a>
@@ -31,42 +32,45 @@
     </div>
   </header>
   <main>
-    <div class="promo">
-      <div class="promo-slider" id="promo-carousel">
-        <section class="promo-slider__item promo-slider__item--family">
+    <div class="promo-slider">
+        <section class="promo-slider__item promo-slider__item--family promo-slider__item--active" id="promo-family">
           <div class="promo-slider__inner">
             <span class="promo-slider__slogan">Семейный отдых на берегу Финского залива</span>
             <h1 class="promo-slider__title">Green Valley - это современная база отдыха в курортном районе для здорового отдыха всей семьёй.</h1>
           </div>
         </section>
-        <section class="promo-slider__item promo-slider__item--company">
+        <section class="promo-slider__item promo-slider__item--company" id="promo-company">
           <div class="promo-slider__inner">
-            <span class="promo-slider__slogan">Семейный отдых на берегу Финского залива</span>
-            <h1 class="promo-slider__title">Green Valley - это современная база отдыха в курортном районе для здорового отдыха всей семьёй.</h1>
+            <span class="promo-slider__slogan">Корпоративный отдых на берегу Финского залива</span>
+            <h1 class="promo-slider__title">Green Valley - это современная база отдыха в курортном районе для запоминающегося отдыха Вашей компании.</h1>
           </div>
         </section>
       </div>
       <div class="promo-tabs">
-          <ul class="promo-tabs__inner">
-            <li class="promo-tabs__item">семейный отдых</li>
-            <li class="promo-tabs__item">корпоративный</li>
-          </ul>
+        <!-- <input type="radio" class="promo-tabs__item" id="promo-tab--1" checked="checked"> -->
+        <!-- <label for="#promo-tab--1" class="promo-tabs__name">семейный отдых</label> -->
+        <!-- <input type="radio" class="promo-tabs__item" id="promo-tab--2"> -->
+        <!-- <label for="#promo-tab--2" class="promo-tabs__name">корпоративный</label> -->
+        <a href="#" class="promo-tabs__item promo-tabs__item--active" id="promo-tabs--1">семейный отдых</a>
+        <a href="#" class="promo-tabs__item" id="promo-tabs--2">корпоративный</a>
       </div>
+      <!-- </div> -->
       <div class="promo-description">
-        <section class="promo-description__item">
-          <h2 class="promo-description__title">Здоровый отдых</h2>
-          <div class="promo-description__text">
-            <p>Плавайте в бассейне, играйте в волейбол, футбол и другие игры. Устройте семейный пикник с шашлыками или снимите напряжение в бане или спа. Почувствуйте отдых!</p>
-          </div>
-          <ul class="promo-description__capabilities-list">
-            <li class="promo-description__capabilities-item"><img src="img/capability-1.png" alt="" class="promo-description__capabilities-img"><span class="promo-description__capabilities-text">бассейн</span></li>
-            <li class="promo-description__capabilities-item"><img src="img/capability-2.png" alt="" class="promo-description__capabilities-img"><span class="promo-description__capabilities-text">спортивная площадка</span></li>
-            <li class="promo-description__capabilities-item"><img src="img/capability-3.png" alt="" class="promo-description__capabilities-img"><span class="promo-description__capabilities-text">бильярд</span></li>
-            <li class="promo-description__capabilities-item"><img src="img/capability-4.png" alt="" class="promo-description__capabilities-img"><span class="promo-description__capabilities-text">спа</span></li>
-            <li class="promo-description__capabilities-item"><img src="img/capability-5.png" alt="" class="promo-description__capabilities-img"><span class="promo-description__capabilities-text">бани</span></li>
-            <li class="promo-description__capabilities-item"><img src="img/capability-6.png" alt="" class="promo-description__capabilities-img"><span class="promo-description__capabilities-text">анимация</span></li>
-          </ul>
-        </section>
+        <div class="promo-description__inner">
+          <section class="promo-description__item">
+            <h2 class="promo-description__title">Здоровый отдых</h2>
+            <div class="promo-description__text">
+              <p>Плавайте в бассейне, играйте в волейбол, футбол и другие игры. Устройте семейный пикник с шашлыками или снимите напряжение в бане или спа. Почувствуйте отдых!</p>
+            </div>
+            <ul class="promo-description__capabilities-list">
+              <li class="promo-description__capabilities-item"><img src="img/capability-1.png" alt="" class="promo-description__capabilities-img"><span class="promo-description__capabilities-text">бассейн</span></li>
+              <li class="promo-description__capabilities-item"><img src="img/capability-2.png" alt="" class="promo-description__capabilities-img"><span class="promo-description__capabilities-text">спортивная площадка</span></li>
+              <li class="promo-description__capabilities-item"><img src="img/capability-3.png" alt="" class="promo-description__capabilities-img"><span class="promo-description__capabilities-text">бильярд</span></li>
+              <li class="promo-description__capabilities-item"><img src="img/capability-4.png" alt="" class="promo-description__capabilities-img"><span class="promo-description__capabilities-text">спа</span></li>
+              <li class="promo-description__capabilities-item"><img src="img/capability-5.png" alt="" class="promo-description__capabilities-img"><span class="promo-description__capabilities-text">бани</span></li>
+              <li class="promo-description__capabilities-item"><img src="img/capability-6.png" alt="" class="promo-description__capabilities-img"><span class="promo-description__capabilities-text">анимация</span></li>
+            </ul>
+          </section>
         <!-- <section class="promo-description__item">
           <h2 class="promo-description__title"></h2>
           <div class="promo-description__text">
@@ -81,6 +85,7 @@
             <li class="promo-description__capabilities-item"></li>
           </ul>
         </section> -->
+        </div>
       </div>
       <div class="promo-gallery">
         <div class="promo-gallery__inner">
@@ -100,40 +105,52 @@
       </div>
     </div>
     <div class="reviews">
-      <div class="reviews__inner">
         <h2 class="reviews__title">Отзывы</h2>
-        <div class="reviews__list">
-          <section class="review-item">
-            <div class="review-item__photo"></div>
-            <div class="review-item__name">Екатерина В.</div>
-            <a href="" class="review-item__soc-link"></a>
-            <div class="review-item__text"></div>
-            <div class="review-item__date"></div>
+        <div class="reviews__list" id="reviews-carousel">
+          <section class="reviews-item">
+            <div class="reviews-item__photo"><img src="img/reviews-photo--1.jpg" alt="Фото Екатерины, рекомендующей отель Green Valley"></div>
+            <div class="reviews-item__name">Екатерина В.</div>
+            <a href="#" class="reviews-item__soc-link"><svg width="22" height="12" fill="#597da3"><use xlink:href="#vk"></use></svg></a>
+            <div class="reviews-item__text"><p>Наша семья счастлива, что открыла для себя Green Valley. Замечательный, комфортный отдых. Хорошее место, приветливый персонал, вкусная еда. Стали постоянными гостями!</p></div>
+            <div class="reviews-item__date"><p>Дата отдыха<br/>01.06.2015 - 08.06.2015</p></div>
           </section>
-          <section class="review-item">
-          <div class="review-item__photo"></div>
-            <div class=review-item__name">Екатерина В.</div>
-            <a href="" class="review-item__soc-link"></a>
-            <div class="review-item__text"></div>
-            <div class="review-item__date"></div>
+          <section class="reviews-item">
+            <div class="reviews-item__photo"><img src="img/reviews-photo--2.jpg" alt="Фото Екатерины, рекомендующей отель Green Valley"></div>
+            <div class="reviews-item__name">Екатерина В.</div>
+            <a href="" class="reviews-item__soc-link"><svg width="22" height="12" fill="#597da3"><use xlink:href="#fb"></use></svg></a>
+            <div class="reviews-item__text"><p>Спасибо всем без исключения сотрудникам отеля за прекрасные дни, проведенные у вас! Наслаждались тишиной, отдохнули прекрасно. Понравилось всё!</p></div>
+            <div class="reviews-item__date"><p>Дата отдыха<br/>15.05.2015 - 20.05.2015</p></div>
+          </section>
+          <section class="reviews-item">
+            <div class="reviews-item__photo"><img src="img/reviews-photo--1.jpg" alt="Фото Екатерины, рекомендующей отель Green Valley"></div>
+            <div class="reviews-item__name">Екатерина В.</div>
+            <a href="#" class="reviews-item__soc-link"><svg width="22" height="12" fill="#597da3"><use xlink:href="#vk"></use></svg></a>
+            <div class="reviews-item__text"><p>Наша семья счастлива, что открыла для себя Green Valley. Замечательный, комфортный отдых. Хорошее место, приветливый персонал, вкусная еда. Стали постоянными гостями!</p></div>
+            <div class="reviews-item__date"><p>Дата отдыха<br/>01.06.2015 - 08.06.2015</p></div>
+          </section>
+          <section class="reviews-item">
+            <div class="reviews-item__photo"><img src="img/reviews-photo--2.jpg" alt="Фото Екатерины, рекомендующей отель Green Valley"></div>
+            <div class="reviews-item__name">Екатерина В.</div>
+            <a href="" class="reviews-item__soc-link"><svg width="22" height="12" fill="#597da3"><use xlink:href="#fb"></use></svg></a>
+            <div class="reviews-item__text"><p>Спасибо всем без исключения сотрудникам отеля за прекрасные дни, проведенные у вас! Наслаждались тишиной, отдохнули прекрасно. Понравилось всё!</p></div>
+            <div class="reviews-item__date"><p>Дата отдыха<br/>15.05.2015 - 20.05.2015</p></div>
           </section>
         </div>
-        <a href="" class="btn btn--ellipse">все отзывы</a>
-      </div>
+        <a href="" class="btn btn--oval btn--border">все отзывы</a>
     </div>
     <div class="action">
       <div class="action__inner">
         <h2 class="action__title">Акции и предложения</h2>
-        <div class="action-slider">
-          <section class="action-item" style="background-image:url();">
+        <div class="action-slider" id="action-carousel">
+          <section class="action-item" style="background-image:url('img/action.jpg');">
             <div class="action-item__description">
               <h4 class="action-item__title">скидки в мае</h4>
               <div class="action-item__text">Забронируйте номер или коттедж любой категории до 31 июня и получите скидку 10%</div>
             </div>
           </section>
-          <section class="action-item" style="background-image:url();">
+          <section class="action-item" style="background-image:url('img/action.jpg');">
             <div class="action-item__description">
-              <h4 class="action-item__title"></h4>
+              <h4 class="action-item__title">летние акции на номера класса "люкс"</h4>
               <div class="action-item__text"></div>
             </div>
           </section>
@@ -145,20 +162,19 @@
         <h2 class="route__title">Как до нас добраться</h2>
         <div class="route__map"></div>
         <div class="route-ways">
-          <div class="route-item">
+          <div class="route-item route-item--bus">
             <h3 class="route-item__title">автобусы</h3>
             <div class="route-item__text">
-              <p>
               <ul class="route-item__list">
-                <li><span class="route-ways__number">№ 211</span> от станции метро "Чёрная речка" до остановки "Санаторий Репино"</li>
+                <li><span class="route-item__number">№ 211</span> от станции метро "Чёрная речка" до остановки "Санаторий Репино"</li>
                 <li><span class="route-item__number">№ 305К</span> от станции метро "Старая деревня"</li>
                 <li><span class="route-item__number">№ 680К</span> от станции метро "Проспект Просвещения"</li>
                 <li><span class="route-item__number">№ 400К</span> от станции метро "Площадь Ленина"</li>
               </ul>
-              </p>
+
             </div>
           </div>
-          <div class="route-item">
+          <div class="route-item route-item--train">
             <h3 class="route-item__title">электропоезд</h3>
             <div class="route-item__text"><p>Электропоезд Выборгского направления от Финляндского вокзала Санкт-Петербурга до платформы "Репино"</p></div>
           </div>
@@ -168,18 +184,26 @@
     <div class="rest-place">
       <div class="rest-place__inner">
         <h2 class="rest-place__title">Где вы хотите отдохнуть?</h2>
-          <div class="place-list">
-            <section class="place-item">
-              <div class="place-item__img"></div>
+        <div class="place-list">
+          <section class="place-item">
+            <div class="place-item__inner">
+              <div class="place-item__img"><img src="img/place-item--1.jpg" alt="Отдых в отеле Green Valley"></div>
               <h3 class="place-item__title">В отеле</h3>
-              <div class="place-item__text">от <span class="place-item__price">4000</span> руб./сутки</div>
-            </section>
-            <section class="place-item">
-              <div class="place-item__img"></div>
-              <h3 class="place-item__title">В коттедже</h3>
-              <div class="place-item__text">от <span class="place-item__price">6800</span> руб./сутки</div>
-            </section>
-          </div>
+              <div class="place-item__text">
+                <p>от <span class="place-item__price">4000</span> руб./сутки</p>
+              </div>
+             </div>
+          </section>
+          <section class="place-item">
+            <div class="place-item__inner">
+               <div class="place-item__img"><img src="img/place-item--2.jpg" alt="Отдых в отеле Green Valley"></div>
+               <h3 class="place-item__title">В коттедже</h3>
+               <div class="place-item__text">
+                <p>от <span class="place-item__price">6800</span> руб./сутки</p>
+               </div>
+            </div>
+          </section>
+        </div>
       </div>
     </div>
   </main>
@@ -187,12 +211,12 @@
     <div class="page-footer__inner">
       <div class="page-footer__address">г. Санкт-Петербург, Приморское ш.600</div>
       <div class="logo-and-social">
-        <a href="" class="logo"></a>
-        <ul class="social-list">
-          <li class="social__item"></li>
-          <li class="social__item"></li>
-          <li class="social__item"></li>
-        </ul>
+        <a href="" class="logo"><img src="img/logo.png" alt=""></a>
+        <div class="social-list">
+          <a href="#" class="social-list__item"><svg width="25" height="15" fill="#0ab89d"><use xlink:href="#vk"></use></svg></a>
+          <a href="#" class="social-list__item"><svg width="20" height="20" fill="#0ab89d"><use xlink:href="#instagram"></use></svg></a>
+          <a href="#" class="social-list__item"><svg width="20" height="20" fill="#0ab89d"><use xlink:href="#fb"></use></svg></a>
+        </div>
       </div>
       <div class="page-footer__contacts">+7 812 777-55-88 info@greenvalley.ru</div>
     </div>

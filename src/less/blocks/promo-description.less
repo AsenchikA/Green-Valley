@@ -3,10 +3,14 @@
 
 .promo-description {
 
-  @media (min-width: @screen-lg){
-    .row;
-    justify-content: center;
-  }
+  &__inner{
+    @media (min-width: @screen-lg){
+      .row;
+      justify-content: center;
+      width: @screen-lg;
+      margin: 0 auto;
+    }
+}
 
   &__item{
     padding: 25px 20px;
@@ -33,9 +37,15 @@
   }
 
   &__text{
+
+    margin-bottom: 30px;
     font-family: @fira-sans;
     font-size: @text-size;
-    margin-bottom: 30px;
+    line-height: 22px;
+
+    @media (min-width: @screen-lg){
+      padding: 0 90px;
+    }
   }
 
   &__capabilities-list{

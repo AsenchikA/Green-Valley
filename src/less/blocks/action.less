@@ -1,0 +1,27 @@
+// Для импорта в диспетчер подключений: @import './src/less/blocks/action.less';
+
+
+.action {
+
+  &__inner{
+    padding: 50px 0;
+    text-align: center;
+
+    @media (min-width: @screen-lg){
+      width: @screen-lg;
+      margin: 0 auto;
+    }
+  }
+  @media (min-width: @screen-lg){
+
+  }
+
+  &__title{
+    font-family: @serif;
+    font-size: @h2-size - 4px;
+
+    @media (min-width: @screen-sm){
+      font-size: @h2-size;
+    }
+  }
+}
