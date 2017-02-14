@@ -11,31 +11,33 @@
   }
 
   &__big{
-    width: 100%;
     margin-bottom: 0px;
-
-
-    img{
-      width: 100%;
-      min-height: 230px;
-      max-height: 500px;
-      object-fit: cover;
-    }
-
-
   }
 
-  &__list{
-    display: none;
-    list-style: none;
+
+  &__big-item{
+    min-height: 230px;
+    max-height: 500px;
+    object-fit: cover;
+  }
+
+  &__thumbs{
     margin-top: 0;
-    -webkit-padding-start: 0px;
-    width: 100%;
 
     @media (min-width: @screen-sm){
       display: block;
     }
   }
 
+  &__thumbs-item{
+
+      @media(min-width: @screen-sm){
+        height: 75px;
+      }
+
+      @media(min-width: @screen-lg){
+        height: 115px;
+      }
+    }
 
 }

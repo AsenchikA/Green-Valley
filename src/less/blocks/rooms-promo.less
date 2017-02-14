@@ -1,0 +1,38 @@
+// Для импорта в диспетчер подключений: @import './src/less/blocks/rooms-promo.less';
+
+
+.rooms-promo {
+  background: url('../img/rooms-promo.jpg') no-repeat;
+  background-size: cover;
+  padding: 0 20px;
+  color: @white;
+  text-align: center;
+
+  &__inner{
+    padding: 50px 0;
+
+    @media (min-width: @screen-lg){
+      width: @screen-lg;
+      margin: 0 auto;
+    }
+  }
+
+  &__title{
+    font-family: @serif;
+    font-size: @h1-size - 6px;
+
+    @media(min-width: @screen-sm){
+      font-size: @h1-size;
+    }
+  }
+
+  &__text{
+    display: none;
+    font-family: @fira-sans;
+
+    @media(min-width: @screen-sm){
+      display: block;
+      font-size: @accent-size;
+    }
+  }
+}
