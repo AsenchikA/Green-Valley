@@ -1,0 +1,49 @@
+.btn{
+  display: block;
+  width: 180px;
+  font-size: @small-size;
+  color: @white;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 14px 0;
+  text-align: center;
+
+
+
+  &--calendar {
+    position: relative;
+    text-align: left;
+    padding-left: 43px;
+  }
+
+  &--calendar:before {
+    content: '';
+    position: absolute;
+    background-image: url(../img/calendar.png);
+    background-repeat: no-repeat;
+    width: 15px;
+    height: 15px;
+    top: 30%;
+    left: 20px;
+  }
+
+  &--orange {
+    background-color: @orange-lighter;
+
+    &:hover{
+      background-color: @orange;
+    }
+  }
+
+  &--green{
+
+  }
+
+  &--oval {
+    border-radius: 20px;
+  }
+
+  &--border{
+    border: 2px solid @white;
+  }
+}

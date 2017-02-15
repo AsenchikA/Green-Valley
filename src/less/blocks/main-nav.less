@@ -1,0 +1,60 @@
+.main-nav {
+  display: none;
+
+
+  &__list{
+    list-style: none;
+    -webkit-padding-start: 0px;
+  }
+
+  &__item{
+    display: inline-block;
+    margin-right: 16px;
+
+    &--active{
+      &:after{
+
+      }
+    }
+  }
+
+  &__link{
+    color: @dark;
+    font-size: @small-size;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover{
+      color: @orange;
+    }
+  }
+
+  @media (min-width: @screen-sm){
+    display: none;
+  }
+
+  @media (min-width: @screen-lg) {
+    display: block;
+    .col-(5);
+  }
+
+  &--visible {
+    display: block;
+
+    @media (min-width: @screen-sm){
+      display: block;
+    }
+  }
+
+  &--visible &__item {
+    border-bottom: 1px solid @dark-lighter;
+    display: block;
+    padding: 20px 0px;
+    margin: 0;
+  }
+
+  &--visible &__link{
+
+
+  }
+}
