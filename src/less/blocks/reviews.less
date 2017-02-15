@@ -10,9 +10,15 @@
   padding-bottom: 50px;
   text-align: center;
 
-  @media (min-width: @screen-sm){
-    padding-left: 20px;
-    padding-right: 20px;
+  &__inner{
+    @media (min-width: @screen-sm){
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    @media (min-width: @screen-lg){
+      width: @screen-lg;
+      margin: 0 auto;
+    }
   }
 
   &__list{
