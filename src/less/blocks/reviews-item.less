@@ -2,17 +2,24 @@
 
 
 .reviews-item {
-  position: relative;
-  overflow: visible;
   width: 100%;
-  background-color: @white;
-  padding: 0 20px;
-  padding-top: 70px;
-  padding-bottom: 30px;
+  height: 100%;
+  margin: 0 auto;
+  padding-top: 25px;
   font-family: @fira-sans;
 
   @media (min-width: @screen-sm){
+    display: block;
+    margin-bottom: 30px;
     max-width: 480px;
+  }
+
+  &__inner{
+    position: relative;
+    background-color: @white;
+    padding: 0 20px;
+    padding-top: 70px;
+    padding-bottom: 30px;
   }
 
   &__name{
@@ -31,7 +38,6 @@
     left: 0;
     right: 0;
     margin: 0 auto;
-    z-index: 2;
   }
 
   &__soc-link{

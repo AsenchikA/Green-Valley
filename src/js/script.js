@@ -7,25 +7,6 @@ $(document).ready(function(){
     document.getElementById('main-nav').classList.toggle('main-nav--visible');
   }
 
-  // $("#promo-carousel").owlCarousel({
-  //   items: 1,
-  //   loop: true,
-  //   dots: false
-  // })
-
-  // $('#promo-thumbs').owlCarousel({
-  //   loop: true,
-  //   dots:false,
-  //   center: true,
-  //   items: 7,
-  // })
-
-  // $('#gallery-thumbs a').on('click', function(event){
-  //   event.preventDefault();
-  //   var mainImageUrl = $(this).attr('href');
-  //   $('#gallery-main-img').attr('src',mainImageUrl);
-  // });
-
   $('#promo-tabs--1').on('click', function(event){
     event.preventDefault();
     $('#promo-tabs--2').removeClass('promo-tabs__item--active');
@@ -57,7 +38,6 @@ $(document).ready(function(){
 
   $('#action-carousel').slick({
     arrows: false,
-    centerMode: true,
     dots: true,
     slidesToShow: 1
   });
@@ -74,7 +54,8 @@ $('#promo-thumbs').slick({
   slidesToScroll: 1,
   asNavFor: '#promo-big',
   dots: false,
-  centerMode: true,
   focusOnSelect: true
 });
+
+
 })

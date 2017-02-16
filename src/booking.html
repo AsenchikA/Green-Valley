@@ -9,25 +9,25 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+@@include('img/sprite-svg.svg')
   <header class="page-header">
     <div class="page-header__inner">
-      <a href="#" class="logo"><img src="img/logo.png" alt=""></a>
+      <a href="index.html" class="logo"><img src="img/logo.png" alt=""></a>
       <nav class="main-nav" id="main-nav">
-      <nav class="main-nav">
         <ul class="main-nav__list">
-          <li class="main-nav__item  main-nav__item--active"><a href="" class="main-nav__link">номера</a></li>
+          <li class="main-nav__item"><a href="room_list.html" class="main-nav__link">номера</a></li>
           <li class="main-nav__item"><a href="" class="main-nav__link">коттедж</a></li>
           <li class="main-nav__item"><a href="" class="main-nav__link">ресторан</a></li>
           <li class="main-nav__item"><a href="" class="main-nav__link">отдых</a></li>
           <li class="main-nav__item"><a href="" class="main-nav__link">контакты</a></li>
         </ul>
-        <span class="main-nav__burger"></span>
       </nav>
       <div class="header-contacts">
         <a href="" class="header-contacts__phone">+7 812 777-55-88</a>
         <div class="header-contacts__address">г. Санкт-Петербург, Приморское ш.600</div>
       </div>
-      <div class="reserve"><a href="" class="btn btn--orange btn--oval">Забронировать</a></div>
+      <div class="header-reserve"><a href="booking.html" class="btn btn--calendar btn--orange btn--oval">Забронировать</a></div>
+      <a href="" class="toggler" id="toggler"><span></span></a>
     </div>
   </header>
   <main>
@@ -157,16 +157,16 @@
       </div>
     </form>
   </main>
-  <footer class="page-footer">
+<footer class="page-footer">
     <div class="page-footer__inner">
       <div class="page-footer__address">г. Санкт-Петербург, Приморское ш.600</div>
       <div class="logo-and-social">
-        <a href="" class="logo"></a>
-        <ul class="social-list">
-          <li class="social__item"></li>
-          <li class="social__item"></li>
-          <li class="social__item"></li>
-        </ul>
+        <a href="" class="logo"><img src="img/logo.png" alt=""></a>
+        <div class="social-list">
+          <a href="#" class="social-list__item"><svg width="25" height="15" fill="#0ab89d"><use xlink:href="#vk"></use></svg></a>
+          <a href="#" class="social-list__item"><svg width="20" height="20" fill="#0ab89d"><use xlink:href="#instagram"></use></svg></a>
+          <a href="#" class="social-list__item"><svg width="20" height="20" fill="#0ab89d"><use xlink:href="#fb"></use></svg></a>
+        </div>
       </div>
       <div class="page-footer__contacts">+7 812 777-55-88 info@greenvalley.ru</div>
     </div>

@@ -1,0 +1,19 @@
+// Для импорта в диспетчер подключений: @import './src/less/blocks/rooms-photo.less';
+
+
+.rooms-photo {
+  width: 100%;
+  max-width: 580px;
+  margin: 0 auto;
+
+  @media (min-width: @screen-lg){
+    order: 3;
+    align-self: flex-end;
+    margin: 0;
+  }
+
+  & img{
+    width: 100%;
+    object-fit: cover;
+  }
+}
