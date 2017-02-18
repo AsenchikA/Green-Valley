@@ -1,0 +1,77 @@
+// Для импорта в диспетчер подключений: @import './src/less/blocks/booking-kind.less';
+
+
+.booking-kind {
+
+  @media (min-width: @screen-sm){
+    margin-bottom: 210px;
+  }
+
+  @media (min-width: @screen-lg){
+    .row;
+    justify-content: center;
+  }
+
+  &__inner{
+    position: relative;
+    padding: 50px 20px;
+    padding-bottom: 0px;
+    background-color: @white;
+
+    @media (min-width: @screen-sm){
+      display: flex;
+      justify-content: space-around;
+      padding-bottom: 30px;
+    }
+
+    @media (min-width: @screen-lg){
+      .col-(8);
+    }
+  }
+
+  &__radio{
+    display: none;
+
+    &:checked + label{
+      color: @black;
+
+      &:before{
+        content: '';
+        position: absolute;
+        width: 16px;
+        height: 12px;
+        background: url('../img/form-checked.png') no-repeat;
+        top: 0;
+        bottom: 0;
+        left: -40px;
+        margin: auto 0;
+
+        @media (min-width: @screen-sm){
+          left: 0;
+          right: 0;
+          top: 30px;
+          margin: 0 auto;
+        }
+      }
+    }
+
+    &:checked ~ .kind-advantages{
+      @media (min-width: @screen-sm){
+        position: absolute;
+        display: flex;
+      }
+    }
+  }
+
+  &__name{
+    display: inline-block;
+    position: relative;
+    margin-bottom: 30px;
+    font-family: @fira-sans;
+    font-size: @text-size;
+    font-weight: bolder;
+    color: @dark-medium;
+    cursor: pointer;
+  }
+
+}

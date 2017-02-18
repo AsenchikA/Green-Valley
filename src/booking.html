@@ -81,19 +81,53 @@
           <h3 class="booking-step__number">шаг 3</h3>
           <h2 class="booking-step__title">Тип коттеджа</h2>
           <div class="booking-kind">
-            <input type="radio" class="booking-kind__item">
-            <ul class="kind-advantages">
-              <li class="kind-advantages__item">площадь 100м<sup>2</sup></li>
-              <li class="kind-advantages__item">3 комнаты</li>
-              <li class="kind-advantages__item">5 спальных мест</li>
-              <li class="kind-advantages__item">раздельный санузел</li>
-              <li class="kind-advantages__item">wi-fi</li>
-            </ul>
-            <input type="radio" class="booking-kind__item">
-            <input type="radio" class="booking-kind__item">
-            <input type="radio" class="booking-kind__item">
+            <div class="booking-kind__inner">
+              <div class="booking-kind__item">
+                <input type="radio" name="booking-kind__selection" checked="checked" class="booking-kind__radio" id="flagman">
+                <label for="flagman" class="booking-kind__name">флагман</label>
+                <ul class="kind-advantages">
+                  <li class="kind-advantages__item kind-advantages__item--S">площадь 100м<sup>2</sup></li>
+                  <li class="kind-advantages__item kind-advantages__item--rooms">3 комнаты</li>
+                  <li class="kind-advantages__item kind-advantages__item--beds">5 спальных мест</li>
+                  <li class="kind-advantages__item kind-advantages__item--bath">раздельный санузел</li>
+                  <li class="kind-advantages__item kind-advantages__item--wf">wi-fi</li>
+                </ul>
+              </div>
+              <div class="booking-kind__item">
+                <input type="radio" name="booking-kind__selection" class="booking-kind__radio" id="ozernii">
+                <label for="ozernii" class="booking-kind__name">озёрный</label>
+                <ul class="kind-advantages">
+                  <li class="kind-advantages__item kind-advantages__item--S">площадь 100м<sup>2</sup></li>
+                  <li class="kind-advantages__item kind-advantages__item--rooms">3 комнаты</li>
+                  <li class="kind-advantages__item kind-advantages__item--beds">5 спальных мест</li>
+                  <!-- <li class="kind-advantages__item kind-advantages__item--bath">раздельный санузел</li>
+                  <li class="kind-advantages__item kind-advantages__item--wf">wi-fi</li> -->
+                </ul>
+              </div>
+              <div class="booking-kind__item">
+                <input type="radio" name="booking-kind__selection" class="booking-kind__radio" id="portovii">
+                <label for="portovii" class="booking-kind__name">портовый</label>
+                <ul class="kind-advantages">
+                  <li class="kind-advantages__item kind-advantages__item--S">площадь 100м<sup>2</sup></li>
+                  <li class="kind-advantages__item kind-advantages__item--rooms">3 комнаты</li>
+                  <li class="kind-advantages__item kind-advantages__item--beds">5 спальных мест</li>
+                  <li class="kind-advantages__item kind-advantages__item--bath">раздельный санузел</li>
+                  <li class="kind-advantages__item kind-advantages__item--wf">wi-fi</li>
+                </ul>
+              </div>
+              <div class="booking-kind__item">
+                <input type="radio" name="booking-kind__selection" class="booking-kind__radio" id="olhovka">
+                <label for="olhovka" class="booking-kind__name">ольховка</label>
+                <ul class="kind-advantages">
+                  <li class="kind-advantages__item kind-advantages__item--S">площадь 100м<sup>2</sup></li>
+                  <li class="kind-advantages__item kind-advantages__item--rooms">3 комнаты</li>
+                  <li class="kind-advantages__item kind-advantages__item--beds">5 спальных мест</li>
+                  <li class="kind-advantages__item kind-advantages__item--bath">раздельный санузел</li>
+                  <li class="kind-advantages__item kind-advantages__item--wf">wi-fi</li>
+                </ul>
+              </div>
+            </div>
           </div>
-
         </div>
       </div>
       <div class="booking-step">
@@ -101,15 +135,17 @@
           <h3 class="booking-step__number">шаг 4</h3>
           <h2 class="booking-step__title">Персональная информация</h2>
           <div class="booking-person">
-            <input type="text" placeholder="имя" class="booking-person__item">
-            <input type="text" placeholder="фамилия" class="booking-person__item">
-            <input type="text" placeholder="номер телефона" class="booking-person__item">
-            <div class="booking-person__comment">
-              <p>Мы свяжемся с Вами в случае необходимости</p>
-            </div>
-            <input type="text" placeholder="e-mail" class="booking-form__person-item">
-            <div class="booking-person__comment">
-              <p>На этот адрес мы вышлем Вам подтверждение о забронированном номере</p>
+            <div class="booking-person__inner">
+              <div class="booking-person__item"><input type="text" placeholder="имя" class="booking-person__input"></div>
+              <div class="booking-person__item"><input type="text" placeholder="фамилия" class="booking-person__input"></div>
+              <div class="booking-person__item"><input type="text" placeholder="номер телефона" class="booking-person__input">
+              <div class="booking-person__comment">
+                <p>Мы свяжемся с Вами в случае необходимости</p>
+              </div></div>
+              <div class="booking-person__item"><input type="text" placeholder="e-mail" class="booking-person__input">
+              <div class="booking-person__comment">
+                <p>На этот адрес мы вышлем Вам подтверждение о забронированном номере</p>
+              </div></div>
             </div>
           </div>
         </div>
@@ -119,44 +155,51 @@
           <h3 class="booking-step__number">шаг 5</h3>
           <h2 class="booking-step__title">Способ оплаты</h2>
           <div class="booking-pay">
-            <div class="pay-total">
-              <h4 class="pay-total__title">к оплате</h4>
-            </div>
-            <div class="pay-methods">
-              <div class="pay-item">
-                <input type="radio" class="" name="pay-method">
-                <h4 class="booking-item__title">по приезду</h4>
-                <div class="booking-item__description">
-                  <p>Вы можете произвести оплату по факту заселения</p>
-                </div>
+            <div class="booking-pay__inner">
+              <div class="pay-methods">
+                <input type="radio" class="pay-methods__radio" name="pay-method" id="pay-later">
+                <label for="pay-later" class="pay-methods__info">
+                  <h4 class="pay-methods__title">по приезду</h4>
+                  <div class="pay-methods__description">
+                    <p>Вы можете произвести оплату по факту заселения</p>
+                  </div>
+                </label>
+                <input type="radio" checked="checked" class="pay-methods__radio" name="pay-method" id="pay-now">
+                <label for="pay-now" class="pay-methods__info">
+                  <h4 class="pay-methods__title">сейчас</h4>
+                  <div class="pay-methods__description">
+                    <p>Прямо сейчас Вы можете произвести оплату с помощью банковской карты.</p>
+                  </div>
+
+                  <div class="pay-methods__data-block pay-methods__data-block--long">
+                    <label for="number-card" class="pay-methods__data-name">номер карты </label>
+                    <input type="text" class="pay-methods__data" placeholder="0000-0000-0000-0000" id="number-card">
+
+                    <label for="surname" class="pay-methods__data-name">фамилия владельца карты </label>
+                    <input type="text" class="pay-methods__data" placeholder="vladimir vladimirov" id="surname">
+                  </div>
+
+                  <div class="pay-methods__data-block pay-methods__data-block--short">
+                    <label for="cvv" class="pay-methods__data-name">код cvv </label>
+                    <input type="text" class="pay-methods__data" placeholder="123" id="cvv">
+
+                    <label for="validity" class="pay-methods__data-name">действует до </label>
+                    <input type="text" class="pay-methods__data" placeholder="01/2018" id="validity">
+                  </div>
+                </label>
               </div>
-              <div class="pay-item">
-                <input type="radio" class="" name="pay-method">
-                <h4 class="booking-item__title">сейчас</h4>
-                <div class="booking-item__description">
-                  <p>Прямо сейчас Вы можете произвести оплату с помощью банковской карты.</p>
+              <div class="pay-total">
+                <div class="pay-total__inner">
+                  <h4 class="pay-total__title">к оплате</h4>
                 </div>
-                <label class="pay-item__info">
-                  номер карты </label>
-                  <input type="text" placeholder="0000-0000-0000-0000">
-
-                <label class="pay-item__info">код cvv </label>
-                  <input type="text" placeholder="123">
-
-                <label class="pay-item__info">фамилия владельца карты </label>
-                  <input type="text" placeholder="vladimir vladimirov">
-
-                <label class="pay-item__info">действует до </label>
-                  <input type="text" placeholder="01/2018">
-
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="booking-step">
-        <div class="booking-step__inner">
-          <button class="btn btn--green">забронировать</button>
+          <div class="booking-btn">
+            <div class="booking-btn__inner">
+              <button class="form-btn">забронировать</button>
+            </div>
+          </div>
         </div>
       </div>
     </form>
