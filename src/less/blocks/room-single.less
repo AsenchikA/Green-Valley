@@ -7,6 +7,17 @@
     width: 100%;
     text-align: center;
     padding-bottom: 30px;
+
+    @media (min-width: @screen-lg){
+      width: @screen-lg;
+      margin:  auto;
+    }
+  }
+
+  &__row{
+    @media (min-width: @screen-lg){
+      .row;
+    }
   }
 
   &__title {

@@ -33,11 +33,13 @@
   <main>
     <div class="booking-description">
       <div class="booking-description__inner">
-        <h1 class="booking-description__title">Бронирование</h1>
-        <div class="booking-description__text">
-          <p>
-          Чтобы забронировать номер в отеле или коттедже, заполните форму ниже или просто позвоните по телефону: <span class="booking-description__phone">+7 812 777-55-88</span>
-          </p>
+        <div class="booking-description__row">
+          <h1 class="booking-description__title">Бронирование</h1>
+          <div class="booking-description__text">
+            <p>
+            Чтобы забронировать номер в отеле или коттедже, заполните форму ниже или просто позвоните по телефону: <span class="booking-description__phone">+7 812 777-55-88</span>
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -49,15 +51,15 @@
           <div class="booking-date">
             <div class="booking-date__entry">
               <h4 class="booking-date__title">дата въезда</h4>
-              <input type="text" placeholder="ДД" class="booking-form__date-item">
-              <input type="text" placeholder="ММ" class="booking-form__date-item">
-              <input type="text" placeholder="ГГ" class="booking-form__date-item">
+              <input type="text" placeholder="ДД" class="booking-date__item" size="2" id="entry-day">
+              <input type="text" placeholder="ММ" class="booking-date__item" size="2" id="entry-month">
+              <input type="text" placeholder="ГГГГ" class="booking-date__item" size="4" id="entry-year">
             </div>
             <div class="booking-date__exit">
               <h4 class="booking-date__title">дата выезда</h4>
-              <input type="text" placeholder="ДД" class="booking-form__date-item">
-              <input type="text" placeholder="ММ" class="booking-form__date-item">
-              <input type="text" placeholder="ГГ" class="booking-form__date-item">
+              <input type="text" placeholder="ДД" class="booking-date__item" size="2">
+              <input type="text" placeholder="ММ" class="booking-date__item" size="2">
+              <input type="text" placeholder="ГГГГ" class="booking-date__item" size="4">
             </div>
           </div>
         </div>
@@ -67,8 +69,10 @@
           <h3 class="booking-step__number">шаг 2</h3>
           <h2 class="booking-step__title">Место проживания</h2>
           <div class="booking-place">
-            <input type="radio" class="booking-place__item">
-            <input type="radio" class="booking-place__item">
+            <input type="radio" name="booking-place__selection" checked="checked" class="booking-place__item" id="hotel">
+            <label for="hotel" class="booking-place__name booking-place__name--hotel">отель</label>
+            <input type="radio" name="booking-place__selection" class="booking-place__item" id="cottage">
+            <label for="cottage" class="booking-place__name booking-place__name--cottage">коттедж</label>
           </div>
         </div>
       </div>

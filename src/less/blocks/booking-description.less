@@ -1,0 +1,61 @@
+// Для импорта в диспетчер подключений: @import './src/less/blocks/booking-description.less';
+
+
+.booking-description {
+  &__inner{
+    padding:50px 20px;
+    text-align: center;
+
+    @media (min-width: @screen-lg){
+      width: @screen-lg;
+      margin: 0 auto;
+    }
+  }
+
+  &__row{
+    @media (min-width: @screen-sm){
+      .row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    @media (min-width: @screen-lg){
+      .row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+  }
+
+  &__title{
+    font-family: @serif;
+    font-size: @h1-size - 6px;
+    color: @black;
+
+    @media (min-width: @screen-sm){
+      .col-(7);
+    }
+
+    @media (min-width: @screen-lg){
+      .col-(4);
+      .col-offset-(4);
+    }
+  }
+
+  &__text{
+    font-family: @fira-sans;
+    font-size: @text-size;
+
+    @media (min-width: @screen-sm){
+      .col-(7);
+    }
+
+    @media (min-width: @screen-lg){
+      .col-(4);
+      .col-offset-(4);
+    }
+  }
+
+  &__phone{
+    color: @orange;
+  }
+}

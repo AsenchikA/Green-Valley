@@ -1,0 +1,37 @@
+// Для импорта в диспетчер подключений: @import './src/less/blocks/booking-step.less';
+
+
+.booking-step {
+  text-align: center;
+
+  &:nth-child(2n + 1){
+    background-color: @gray-lighter;
+  }
+
+  &:nth-child(2n){
+    background-color: @white;
+  }
+
+  &__inner{
+    padding: 50px 20px;
+
+    @media (min-width: @screen-lg){
+      width: @screen-lg;
+      margin: 0 auto;
+    }
+  }
+
+  &__number{
+    font-family: @fira-sans;
+    font-size: @h3-size;
+    color: @dark-medium;
+    text-transform: uppercase;
+  }
+
+  &__title{
+    font-family: @serif;
+    font-size: @h2-size - 4px;
+    color: @black;
+    margin-bottom: 30px;
+  }
+}
