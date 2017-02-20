@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-  var toggler = document.getElementById("toggler");
+  var toggler = document.getElementById("toggler"); // раскрытие меню
   toggler.onclick = function(e){
     e.preventDefault();
     document.getElementById('main-nav').classList.toggle('main-nav--visible');
@@ -29,21 +29,21 @@ $(document).ready(function(){
       nextArrow: '<i class="reviews__arrows reviews__arrows--next"></i>',
       prevArrow: '<i class="reviews__arrows reviews__arrows--prev"></i>',
       responsive: [
-    {
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    },
-    {
-      breakpoint: 1200,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    }
-    ]
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 1200,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
   });
 
   $('#action-carousel').slick({
@@ -69,10 +69,42 @@ $('#promo-thumbs').slick({
 });
 
 $('#econom-gallery').slick({
-    arrows: true,
+    slidesToShow: 1,
     dots: false,
-    slidesToShow: 1
+    arrows: true,
+    nextArrow: '<i class="room-gallery__arrows room-gallery__arrows--next"></i>',
+    prevArrow: '<i class="room-gallery__arrows room-gallery__arrows--prev"></i>',
+    responsive: [
+        {
+          breakpoint: 1200,
+          settings: {
+            arrows: false,
+          }
+        }
+      ]
   });
+
+  $('#zoom-link').click( function(event){ // лoвим клик пo ссылке с id
+      event.preventDefault(); // выключaем стaндaртную рoль элементa
+      var source = $('.slick-active').attr('src');
+      $('#overlay').fadeIn(400, // снaчaлa плaвнo пoкaзывaем темную пoдлoжку
+        function(){ // пoсле выпoлнения предъидущей aнимaции
+          $('#zoom-photo img').attr('src', source);
+          $('#zoom-photo')
+            .css('display', 'block') // убирaем у мoдaльнoгo oкнa display: none;
+            .animate({opacity: 1}, 200); // плaвнo прибaвляем прoзрaчнoсть oднoвременнo сo съезжaнием вниз
+      });
+    });
+    /* Зaкрытие мoдaльнoгo oкнa, тут делaем тo же сaмoе нo в oбрaтнoм пoрядке */
+    $('#overlay').click( function(){ // лoвим клик пo крестику или пoдлoжке
+      $('#zoom-photo')
+        .animate({opacity: 0}, 200,  // плaвнo меняем прoзрaчнoсть нa 0 и oднoвременнo двигaем oкнo вверх
+          function(){ // пoсле aнимaции
+            $(this).css('display', 'none'); // делaем ему display: none;
+            $('#overlay').fadeOut(400); // скрывaем пoдлoжку
+          }
+        );
+    });
 
 $('.booking-date__item').blur(function () {
     var entryDay = $("#entry-day").val().length;

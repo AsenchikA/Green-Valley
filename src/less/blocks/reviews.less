@@ -10,6 +10,7 @@
   text-align: center;
 
   &__inner{
+
     @media (min-width: @screen-sm){
       padding-left: 20px;
       padding-right: 20px;
@@ -22,19 +23,14 @@
 
   &__list {
     margin-bottom: 40px;
-      // .row;
+
     @media (min-width: @screen-sm){
-      // .row;
-      // flex-direction: column;
-      // flex-wrap: wrap;
-      // align-items: stretch;
-      // margin: 0 auto;
 
     }
 
     @media (min-width: @screen-lg){
-      // width: 980px;
-      // margin: 0 auto;
+      width: 980px;
+      margin: 0 auto;
     }
   }
 
@@ -63,12 +59,12 @@
     cursor: pointer;
 
     &--prev{
-      left: -25px;
+      left: -15px;
       transform: rotate(-135deg);
     }
 
     &--next{
-      right: -5px;
+      right: -15px;
       transform: rotate(45deg);
     }
   }

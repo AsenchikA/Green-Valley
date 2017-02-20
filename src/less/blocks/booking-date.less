@@ -15,15 +15,16 @@
   &__item{
     display: inline-block;
     padding: 20px;
+    text-align: center;
     text-transform: uppercase;
     color: @dark-medium;
     font-family: @fira-sans;
     font-weight: bolder;
     border: 1px solid @dark-lighter;
-    margin-right: -1px;
+    border-right: 1px solid transparent;
 
     &:last-child{
-      margin-right: 0;
+      border: 1px solid @dark-lighter;
     }
 
     &:focus{
