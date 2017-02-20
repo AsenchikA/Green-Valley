@@ -51,15 +51,15 @@
           <div class="booking-date">
             <div class="booking-date__entry">
               <h4 class="booking-date__title">дата въезда</h4>
-              <input type="text" placeholder="ДД" class="booking-date__item" size="2" id="entry-day">
-              <input type="text" placeholder="ММ" class="booking-date__item" size="2" id="entry-month">
-              <input type="text" placeholder="ГГГГ" class="booking-date__item" size="4" id="entry-year">
+              <input type="text" maxlength="2" placeholder="ДД" class="booking-date__item" size="2" id="entry-day">
+              <input type="text" maxlength="2" placeholder="ММ" class="booking-date__item" size="2" id="entry-month">
+              <input type="text" maxlength="4" placeholder="ГГГГ" class="booking-date__item" size="4" id="entry-year">
             </div>
             <div class="booking-date__exit">
               <h4 class="booking-date__title">дата выезда</h4>
-              <input type="text" placeholder="ДД" class="booking-date__item" size="2">
-              <input type="text" placeholder="ММ" class="booking-date__item" size="2">
-              <input type="text" placeholder="ГГГГ" class="booking-date__item" size="4">
+              <input type="text" maxlength="2" placeholder="ДД" class="booking-date__item" size="2" id="exit-day">
+              <input type="text" maxlength="2" placeholder="ММ" class="booking-date__item" size="2" id="exit-month">
+              <input type="text" maxlength="4" placeholder="ГГГГ" class="booking-date__item" size="4" id="exit-year">
             </div>
           </div>
         </div>
@@ -172,18 +172,18 @@
                   </div>
 
                   <div class="pay-methods__data-block pay-methods__data-block--long">
-                    <label for="number-card" class="pay-methods__data-name">номер карты </label>
+                    <label for="number-card" class="pay-methods__data-name">номер карты</label>
                     <input type="text" class="pay-methods__data" placeholder="0000-0000-0000-0000" id="number-card">
 
-                    <label for="surname" class="pay-methods__data-name">фамилия владельца карты </label>
+                    <label for="surname" class="pay-methods__data-name">фамилия владельца карты</label>
                     <input type="text" class="pay-methods__data" placeholder="vladimir vladimirov" id="surname">
                   </div>
 
                   <div class="pay-methods__data-block pay-methods__data-block--short">
-                    <label for="cvv" class="pay-methods__data-name">код cvv </label>
+                    <label for="cvv" class="pay-methods__data-name">код cvv</label>
                     <input type="text" class="pay-methods__data" placeholder="123" id="cvv">
 
-                    <label for="validity" class="pay-methods__data-name">действует до </label>
+                    <label for="validity" class="pay-methods__data-name">действует до</label>
                     <input type="text" class="pay-methods__data" placeholder="01/2018" id="validity">
                   </div>
                 </label>
@@ -191,13 +191,15 @@
               <div class="pay-total">
                 <div class="pay-total__inner">
                   <h4 class="pay-total__title">к оплате</h4>
+                  <div class="pay-total__success">14 000 руб.</div>
+                  <div class="pay-total__error"><p>Пожалуйста, заполните следующие поля: <span class="pay-total__record"></span>чтобы увидеть сумму к оплате</p></div>
                 </div>
               </div>
             </div>
           </div>
           <div class="booking-btn">
             <div class="booking-btn__inner">
-              <button class="form-btn">забронировать</button>
+              <button class="form-btn" id="reserve-btn">забронировать</button>
             </div>
           </div>
         </div>

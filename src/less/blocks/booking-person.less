@@ -45,9 +45,15 @@
     font-size: @small-size;
     text-transform: uppercase;
     color: @dark-medium;
+    border: 1px solid @dark-lighter;
 
     &:focus::placeholder{
       color: transparent;
+    }
+
+    &--done{
+      background: url('../../img/form-checked.png') no-repeat;
+      background-position: 20px center;
     }
 
   }

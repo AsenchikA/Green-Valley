@@ -22,4 +22,39 @@
     color: @dark-medium;
     text-transform: uppercase;
   }
+
+  &__success{
+    display: none;
+    font-family: @fira-sans;
+    font-size: @accent-size + 6px;
+    color: @black;
+    text-transform: uppercase;
+  }
+
+  &__error{
+    display: none;
+    position: relative;
+    font-family: @fira-sans;
+    font-size: 14px;
+    line-height: 19px;
+    color: @dark-medium;
+    text-align: left;
+
+    & p{
+      text-indent: 18px;
+    }
+    & p:before{
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 12px;
+      background: url('../../img/form-error.png') no-repeat;
+      top: 3px;
+      left: 0;
+    }
+  }
+
+  &__record{
+    border-bottom: 1px dashed @dark-medium;
+  }
 }

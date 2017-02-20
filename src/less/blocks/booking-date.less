@@ -19,6 +19,16 @@
     color: @dark-medium;
     font-family: @fira-sans;
     font-weight: bolder;
+    border: 1px solid @dark-lighter;
+    margin-right: -1px;
+
+    &:last-child{
+      margin-right: 0;
+    }
+
+    &:focus{
+      outline: 0px;
+    }
 
     &:focus::placeholder{
       color: transparent;

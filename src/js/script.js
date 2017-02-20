@@ -3,7 +3,6 @@ $(document).ready(function(){
   var toggler = document.getElementById("toggler");
   toggler.onclick = function(e){
     e.preventDefault();
-    // toggler.classList.toggle("toggler--close");
     document.getElementById('main-nav').classList.toggle('main-nav--visible');
   }
 
@@ -75,23 +74,89 @@ $('#econom-gallery').slick({
     slidesToShow: 1
   });
 
-// $('input').blur(function () {
-// 07
-//     var min = 5;
-// 08
-//     span = $(this).next('span');
-// 09
-//     if(this.value.length < min) span.html('слово должен содержат более ' + (min-1) + ' символов, гы :=)) ');
-// 10
-//   });
+$('.booking-date__item').blur(function () {
+    var entryDay = $("#entry-day").val().length;
+    entryMonth = $("#entry-month").val().length;
+    entryYear = $("#entry-year").val().length;
+    exitDay = $("#exit-day").val().length;
+    exitMonth = $("#exit-month").val().length;
+    exitYear = $("#exit-year").val().length;
 
-$('.booking-date__item').blur(function (){
-  if (($('#entry-day').val().length==2) && ($('#entry-month').value.length == 2) && ($('#entry-year').value.length == 4)){
-    $('#entry-date').addClass('booking-date__item--done'),
-    $('#entry-month').addClass('booking-date__item--done'),
-    $('#entry-year').addClass('booking-date__item--done')
-  }
-});
+    if ((entryDay==2) && (entryMonth == 2) && (entryYear == 4)){
+      $("#entry-day").addClass('booking-date__item--done'),
+      $("#entry-month").addClass('booking-date__item--done'),
+      $("#entry-year").addClass('booking-date__item--done')
+    }
 
+    if ((exitDay==2) && (exitMonth == 2) && (exitYear == 4)){
+      $("#exit-day").addClass('booking-date__item--done'),
+      $("#exit-month").addClass('booking-date__item--done'),
+      $("#exit-year").addClass('booking-date__item--done')
+    }
+  });
+
+  $('.booking-person__input').change(function(){
+    $(this).addClass('booking-person__input--done')
+  });
+
+  $("#reserve-btn").on('click', function(event){
+    event.preventDefault();
+    $(".pay-total__error").css("display", "block"); // вывод на экран блока о недостаточности данных
+    $(".pay-total__record").text(""); // очистка данных при повторном нажатии на кнопку о необходимости заполнения полей
+    var errors = 0; // подсчёт ошибок
+    errorsEntry = 0;
+    errorsExit = 0;
+    contentError = "";
+    idContent = "";
+
+
+
+    $('.booking-date__entry>.booking-date__item').each(function(){
+      if ($(this).val().length == 0) {
+        errors = errors + 1;
+        errorsEntry = errorsEntry +1;
+      }
+    });
+
+    if (errorsEntry != 0) {
+      contentError = $('.booking-date__entry>.booking-date__title').text();
+      $(".pay-total__record").append(contentError + ", ");
+    }
+
+    $('.booking-date__exit>.booking-date__item').each(function(){
+      if ($(this).val().length == 0) {
+        errors = errors + 1;
+        errorsExit = errorsExit +1;
+      }
+    });
+
+    if (errorsExit != 0) {
+      contentError = $('.booking-date__exit>.booking-date__title').text();
+      $(".pay-total__record").append(contentError + ", ");
+    }
+
+    $('.booking-person__input').each(function(){
+      if ($(this).val().length == 0) {
+        errors = errors + 1;
+        contentError = $(this).attr("placeholder"); // получение названия незаполненного поля
+        $(".pay-total__record").append(contentError + ", "); // вставка названия незаполненного поля в блок информирования об ошбике
+      }
+    });
+
+    if ($('#pay-now').attr('checked') == 'checked'){
+      $('.pay-methods__data').each(function(){
+        if ($(this).val().length == 0) {
+          errors = errors + 1;
+          idContent = $(this).attr('id');
+          contentError = $("[for='" +idContent+ "']").text(); // получение названия незаполненного поля
+          $(".pay-total__record").append(contentError + ", ");
+        }
+      });
+    };
+
+    if (errors == 0){
+      $(".pay-total__success").css("display", "block"); // вывод на экран блока с ценой при достаточном заполнении всех полей формы
+    }
+  });
 
 })
