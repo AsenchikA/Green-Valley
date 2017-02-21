@@ -2,13 +2,18 @@
 
 
 .room-info {
-  padding: 50px 22px;
-  text-align: left;
-  font-family: @fira-sans;
+
+  &__inner{
+    font-family: @fira-sans;
+    padding: 0 20px;
+    padding-bottom: 50px;
+    text-align: left;
+  }
 
   &__title{
     font-size: @h2-size - 4px;
     font-weight: lighter;
+    margin-top: 45px;
   }
 
   &__text{
@@ -17,13 +22,27 @@
 
   &__list{
     list-style: none;
+    -webkit-padding-start: 0px;
+    margin: 0;
+
+  }
+
+  &__list-item{
+    position: relative;
+    padding-left: 10px;
   }
 
   &__list-item:before{
     content: '';
-    width: 6px;
-    height: 6px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto 0;
+    width: 5px;
+    height: 5px;
     border-right: 1px solid @orange-lighter;
     border-top: 1px solid @orange-lighter;
+    transform: rotate(45deg);
   }
 }

@@ -4,7 +4,12 @@
 .route-item {
   .col-(12);
   position: relative;
+  margin: 0 auto;
   margin-bottom: 70px;
+
+  &:last-child{
+    margin-bottom: 0;
+  }
 
   @media (min-width: @screen-lg){
     .col-(5);
