@@ -2,7 +2,6 @@
 
 
 .reviews-item {
-  margin: 0 10px;
   padding-top: 25px;
   font-family: @fira-sans;
 
@@ -13,8 +12,23 @@
     margin-bottom: 30px;
   }
 
+  @media (min-width: @screen-lg){
+    margin: 0 10px;
+
+  }
+
+
   &:nth-child(n+3){
-    display: none;
+
+    @media (min-width: @screen-sm){
+      display: none;
+    }
+
+    @media (min-width: @screen-lg){
+
+      display: block;
+      // width: 480px;
+    }
   }
 
   &__inner{
