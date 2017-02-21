@@ -6,7 +6,7 @@ $(document).ready(function(){
     document.getElementById('main-nav').classList.toggle('main-nav--visible');
   }
 
-  $('#promo-tabs--1').on('click', function(event){
+  $('#promo-tabs--1').on('click', function(event){ //переключение промо-табов на странице index.html
     event.preventDefault();
     $('#promo-tabs--2').removeClass('promo-tabs__item--active');
     $('#promo-tabs--1').addClass('promo-tabs__item--active');
@@ -22,8 +22,9 @@ $(document).ready(function(){
     $('#promo-company').addClass('promo-slider__item--active');
   });
 
-  $('#reviews-carousel').slick({
+  $('#reviews-carousel').slick({ // карусель отзывов на странице index.html
       slidesToShow: 2,
+      slidesToScroll: 2,
       dots: false,
       arrows: true,
       nextArrow: '<i class="reviews__arrows reviews__arrows--next"></i>',
@@ -36,23 +37,45 @@ $(document).ready(function(){
             slidesToScroll: 1
           }
         },
-        {
-          breakpoint: 1200,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1
-          }
-        }
       ]
   });
 
-  $('#action-carousel').slick({
+  if (($(document).width()<1200) && ($(document).width()>=768)){ // отключение карусели отзывов на странице index.html при разрешении, меньшим 1200px, но большим 768
+    $('#reviews-carousel').slick('destroy');
+  }
+
+  $(window).resize(function(){ // подключение карусели отзывов на странице index.html при изменении размеров окна браузера до необходимых
+    if (($(document).width()<1200) && ($(document).width()>=768)){
+      $('#reviews-carousel').slick('destroy');
+    }
+    else {
+      $('#reviews-carousel').slick({
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        dots: false,
+        arrows: true,
+        nextArrow: '<i class="reviews__arrows reviews__arrows--next"></i>',
+        prevArrow: '<i class="reviews__arrows reviews__arrows--prev"></i>',
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          },
+        ]
+      });
+    }
+});
+
+  $('#action-carousel').slick({ // галерея в блоке "Акции и предложения" на странице index.html
     arrows: false,
     dots: true,
     slidesToShow: 1
   });
 
- $('#promo-big').slick({
+ $('#promo-big').slick({ // галерея на странице index.html
   slidesToShow: 1,
   slidesToScroll: 1,
   arrows: false,
@@ -68,7 +91,7 @@ $('#promo-thumbs').slick({
   focusOnSelect: true
 });
 
-$('#econom-gallery').slick({
+$('#econom-gallery').slick({ // галерея на странице room_single
     slidesToShow: 1,
     dots: false,
     arrows: true,
@@ -84,7 +107,7 @@ $('#econom-gallery').slick({
       ]
   });
 
-  $('#zoom-link').click( function(event){ // лoвим клик пo ссылке с id
+  $('#zoom-link').click( function(event){ // увеличение изображения из галереи
       event.preventDefault(); // выключaем стaндaртную рoль элементa
       var source = $('.slick-active').attr('src');
       $('#overlay').fadeIn(400, // снaчaлa плaвнo пoкaзывaем темную пoдлoжку
@@ -106,7 +129,7 @@ $('#econom-gallery').slick({
         );
     });
 
-$('.booking-date__item').blur(function () {
+$('.booking-date__item').blur(function () {  // проверка достаточности введенных данных в шаге 1 на странице бронирования
     var entryDay = $("#entry-day").val().length;
     entryMonth = $("#entry-month").val().length;
     entryYear = $("#entry-year").val().length;
@@ -127,11 +150,11 @@ $('.booking-date__item').blur(function () {
     }
   });
 
-  $('.booking-person__input').change(function(){
+  $('.booking-person__input').change(function(){ // проверка введения данных в шаге 4 на странице бронирования
     $(this).addClass('booking-person__input--done')
   });
 
-  $("#reserve-btn").on('click', function(event){
+  $("#reserve-btn").on('click', function(event){ // проверка всей формы на странице бронирования на достаточность ввода данных
     event.preventDefault();
     $(".pay-total__error").css("display", "block"); // вывод на экран блока о недостаточности данных
     $(".pay-total__record").text(""); // очистка данных при повторном нажатии на кнопку о необходимости заполнения полей
@@ -143,31 +166,31 @@ $('.booking-date__item').blur(function () {
 
 
 
-    $('.booking-date__entry>.booking-date__item').each(function(){
+    $('.booking-date__entry>.booking-date__item').each(function(){ // проверка шага 1
       if ($(this).val().length == 0) {
         errors = errors + 1;
         errorsEntry = errorsEntry +1;
       }
     });
 
-    if (errorsEntry != 0) {
+    if (errorsEntry != 0) { // вывод сообщения о недостаточности данных в шаге 1
       contentError = $('.booking-date__entry>.booking-date__title').text();
       $(".pay-total__record").append(contentError + ", ");
     }
 
-    $('.booking-date__exit>.booking-date__item').each(function(){
+    $('.booking-date__exit>.booking-date__item').each(function(){   // проверка шага 4
       if ($(this).val().length == 0) {
         errors = errors + 1;
         errorsExit = errorsExit +1;
       }
     });
 
-    if (errorsExit != 0) {
+    if (errorsExit != 0) {  // вывод сообщения о недостаточности данных в шаге 4
       contentError = $('.booking-date__exit>.booking-date__title').text();
       $(".pay-total__record").append(contentError + ", ");
     }
 
-    $('.booking-person__input').each(function(){
+    $('.booking-person__input').each(function(){  // проверка шага 5
       if ($(this).val().length == 0) {
         errors = errors + 1;
         contentError = $(this).attr("placeholder"); // получение названия незаполненного поля
@@ -175,7 +198,7 @@ $('.booking-date__item').blur(function () {
       }
     });
 
-    if ($('#pay-now').attr('checked') == 'checked'){
+    if ($('#pay-now').attr('checked') == 'checked'){  // вывод сообщения о недостаточности данных в шаге 5
       $('.pay-methods__data').each(function(){
         if ($(this).val().length == 0) {
           errors = errors + 1;
@@ -186,9 +209,82 @@ $('.booking-date__item').blur(function () {
       });
     };
 
-    if (errors == 0){
-      $(".pay-total__success").css("display", "block"); // вывод на экран блока с ценой при достаточном заполнении всех полей формы
+    if (errors == 0){ // вывод на экран блока с ценой при достаточном заполнении всех полей формы
+      $(".pay-total__success").css("display", "block");
     }
   });
+
+   $("#bookingValidate").validate({  // валидация формы
+       rules:{
+
+            dateDay:{
+                min: 1,
+                max: 31,
+            },
+
+            dateMonth:{
+                min: 1,
+                max: 12,
+            },
+
+            dateYear:{
+                min: 2017,
+                max: 2018,
+            },
+
+            phone:{
+                digits: true,
+            },
+
+            email:{
+                email: true,
+            },
+
+            cvv:{
+                digits: true,
+                minlength: 3,
+                maxlength: 3,
+            },
+            creditCard:{
+              creditcard: true,
+            }
+       },
+
+       messages:{
+
+            dateDay:{
+                min: "",
+                max: "",
+            },
+
+            dateMonth:{
+                min:"",
+                max: "",
+            },
+
+            dateYear:{
+                min: "",
+                max: "",
+            },
+
+            phone:{
+                digits: "",
+            },
+
+            email:{
+                email: "",
+            },
+
+            cvv:{
+                digits: "",
+                minlength: "",
+                maxlength: "",
+            },
+
+            creditCard:{
+              creditcard: "",
+            }
+       }
+    });
 
 })

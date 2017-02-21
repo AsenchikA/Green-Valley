@@ -43,7 +43,7 @@
         </div>
       </div>
     </div>
-    <form action="" class="booking-form">
+    <form id="bookingValidate" action="" class="booking-form" >
       <div class="booking-step">
         <div class="booking-step__inner">
           <h3 class="booking-step__number">шаг 1</h3>
@@ -51,15 +51,15 @@
           <div class="booking-date">
             <div class="booking-date__entry">
               <h4 class="booking-date__title">дата въезда</h4>
-              <input type="text" maxlength="2" placeholder="ДД" class="booking-date__item" size="2" id="entry-day">
-              <input type="text" maxlength="2" placeholder="ММ" class="booking-date__item" size="2" id="entry-month">
-              <input type="text" maxlength="4" placeholder="ГГГГ" class="booking-date__item" size="4" id="entry-year">
+              <input type="text" maxlength="2" placeholder="ДД" class="booking-date__item" size="2" id="entry-day" name="dateDay">
+              <input type="text" maxlength="2" placeholder="ММ" class="booking-date__item" size="2" id="entry-month" name="dateMonth">
+              <input type="text" maxlength="4" placeholder="ГГГГ" class="booking-date__item" size="4" id="entry-year" name="dateYear">
             </div>
             <div class="booking-date__exit">
               <h4 class="booking-date__title">дата выезда</h4>
-              <input type="text" maxlength="2" placeholder="ДД" class="booking-date__item" size="2" id="exit-day">
-              <input type="text" maxlength="2" placeholder="ММ" class="booking-date__item" size="2" id="exit-month">
-              <input type="text" maxlength="4" placeholder="ГГГГ" class="booking-date__item" size="4" id="exit-year">
+              <input type="text" maxlength="2" placeholder="ДД" class="booking-date__item" size="2" id="exit-day" name="dateDay">
+              <input type="text" maxlength="2" placeholder="ММ" class="booking-date__item" size="2" id="exit-month" name="dateMonth">
+              <input type="text" maxlength="4" placeholder="ГГГГ" class="booking-date__item" size="4" id="exit-year" name="dateYear">
             </div>
           </div>
         </div>
@@ -136,13 +136,13 @@
           <h2 class="booking-step__title">Персональная информация</h2>
           <div class="booking-person">
             <div class="booking-person__inner">
-              <div class="booking-person__item"><input type="text" placeholder="имя" class="booking-person__input"></div>
-              <div class="booking-person__item"><input type="text" placeholder="фамилия" class="booking-person__input"></div>
-              <div class="booking-person__item"><input type="text" placeholder="номер телефона" class="booking-person__input">
+              <div class="booking-person__item"><input type="text" placeholder="имя" class="booking-person__input" name="firstname"></div>
+              <div class="booking-person__item"><input type="text" placeholder="фамилия" class="booking-person__input" name="lastname"></div>
+              <div class="booking-person__item"><input type="text" placeholder="номер телефона" class="booking-person__input" name="phone">
               <div class="booking-person__comment">
                 <p>Мы свяжемся с Вами в случае необходимости</p>
               </div></div>
-              <div class="booking-person__item"><input type="text" placeholder="e-mail" class="booking-person__input">
+              <div class="booking-person__item"><input type="text" placeholder="e-mail" class="booking-person__input" name="email">
               <div class="booking-person__comment">
                 <p>На этот адрес мы вышлем Вам подтверждение о забронированном номере</p>
               </div></div>
@@ -173,7 +173,7 @@
 
                   <div class="pay-methods__data-block pay-methods__data-block--long">
                     <label for="number-card" class="pay-methods__data-name">номер карты</label>
-                    <input type="text" class="pay-methods__data" placeholder="0000-0000-0000-0000" id="number-card">
+                    <input type="text" class="pay-methods__data" placeholder="0000-0000-0000-0000" id="number-card" name="creditCard">
 
                     <label for="surname" class="pay-methods__data-name">фамилия владельца карты</label>
                     <input type="text" class="pay-methods__data" placeholder="vladimir vladimirov" id="surname">
@@ -181,7 +181,7 @@
 
                   <div class="pay-methods__data-block pay-methods__data-block--short">
                     <label for="cvv" class="pay-methods__data-name">код cvv</label>
-                    <input type="text" class="pay-methods__data" placeholder="123" id="cvv">
+                    <input type="text" class="pay-methods__data" placeholder="123" id="cvv" name="cvv">
 
                     <label for="validity" class="pay-methods__data-name">действует до</label>
                     <input type="text" class="pay-methods__data" placeholder="01/2018" id="validity">

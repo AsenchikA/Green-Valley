@@ -112,9 +112,25 @@
     font-size: @small-size;
     text-align: center;
     color: @gray;
+    border: 1px solid @dark-lighter;
+    padding: 15px;
+
+    &:focus{
+      outline: 0px;
+    }
 
     &:focus::placeholder{
       color: transparent;
+    }
+
+    &.error{
+      background: url('../../img/form-error.png') no-repeat;
+      background-position: 20px center;
+    }
+
+    &.valid{
+      background: url('../../img/form-checked.png') no-repeat;
+      background-position: 10px center;
     }
   }
 }
