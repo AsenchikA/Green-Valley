@@ -1,0 +1,120 @@
+// Для импорта в диспетчер подключений: @import './src/less/blocks/pay-item.less';
+
+
+.pay-methods {
+  text-align: left;
+
+  @media (min-width: @screen-sm){
+    .col-(6);
+    flex-basis: 62.5%;
+    order: 2;
+  }
+
+  &__radio{
+    display: none;
+  }
+
+  &__radio:checked + &__info &__title:before{
+    background: url('../../img/form-checked.png') no-repeat;
+  }
+
+  &__title{
+    position: relative;
+    font-family: @fira-sans;
+    font-size: @small-size;
+    color: @dark-medium;
+    text-transform: uppercase;
+    padding-left: 36px;
+
+    @media (min-width: @screen-sm){
+      display: inline-block;
+      vertical-align: top;
+      width: 34%;
+    }
+
+    &:before{
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      background: url('../../img/form-unchecked.png') no-repeat;
+    }
+  }
+
+  &__info{
+    display: block;
+    width: 100%;
+    padding: 20px 40px;
+    margin-bottom: 20px;
+    background-color: @white;
+
+    @media (min-width: @screen-sm){
+
+
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+
+
+  }
+
+  &__description{
+    display: none;
+    font-family: @fira-sans;
+    font-size: @small-size;
+    color: @dark-medium;
+
+    @media (min-width: @screen-sm){
+      display: inline-block;
+      vertical-align: top;
+      width: 64%;
+    }
+  }
+
+  &__data-block{
+    width: 100%;
+
+    &--long{
+      @media (min-width: @screen-sm){
+        display: inline-block;
+        width: 60%;
+        margin-right: 20px;
+      }
+    }
+
+    &--short{
+        width: 50%;
+
+        @media (min-width: @screen-sm){
+          display: inline-block;
+          width: 30%;
+        }
+      }
+  }
+
+  &__data-name{
+    display: block;
+    font-family: @fira-sans;
+    font-size: @small-size;
+    color: @dark-medium;
+    text-transform: uppercase;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  &__data{
+    width: 100%;
+    font-family: @fira-sans;
+    font-size: @small-size;
+    text-align: center;
+    color: @gray;
+
+    &:focus::placeholder{
+      color: transparent;
+    }
+  }
+}

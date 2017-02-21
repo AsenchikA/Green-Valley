@@ -1,0 +1,41 @@
+// Для импорта в диспетчер подключений: @import './src/less/blocks/booking-date.less';
+
+
+.booking-date {
+  font-size: 0;
+
+  &__title{
+    font-family: @fira-sans;
+    font-size: @small-size;
+    color: @dark-medium;
+    font-weight: lighter;
+    text-transform: uppercase;
+  }
+
+  &__item{
+    display: inline-block;
+    padding: 20px;
+    text-transform: uppercase;
+    color: @dark-medium;
+    font-family: @fira-sans;
+    font-weight: bolder;
+    border: 1px solid @dark-lighter;
+    margin-right: -1px;
+
+    &:last-child{
+      margin-right: 0;
+    }
+
+    &:focus{
+      outline: 0px;
+    }
+
+    &:focus::placeholder{
+      color: transparent;
+    }
+
+    &--done{
+      color: @green;
+    }
+  }
+}

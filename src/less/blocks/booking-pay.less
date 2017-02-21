@@ -1,0 +1,23 @@
+// Для импорта в диспетчер подключений: @import './src/less/blocks/booking-pay.less';
+
+
+.booking-pay {
+  margin-bottom: 50px;
+
+  @media (min-width: @screen-lg){
+    .row;
+    justify-content: center;
+  }
+
+  &__inner{
+    @media (min-width: @screen-sm){
+      .row;
+      align-items: stretch;
+    }
+
+    @media (min-width: @screen-lg){
+      .col-(8);
+      padding: 0;
+    }
+  }
+}

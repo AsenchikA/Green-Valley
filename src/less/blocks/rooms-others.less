@@ -6,6 +6,19 @@
 
   &__inner{
     padding: 50px 20px;
+    padding-bottom: 30px;
     text-align: center;
+
+    @media (min-width: @screen-lg){
+      width: @screen-lg;
+      margin: 0 auto;
+    }
+  }
+
+  &__row{
+    @media (min-width: @screen-sm){
+      .row;
+      justify-content: space-around;
+    }
   }
 }

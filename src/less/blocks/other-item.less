@@ -2,5 +2,23 @@
 
 
 .other-item {
-  background-color: @white;
+  margin-bottom: 20px;
+
+  @media (min-width: @screen-sm){
+    .col-(6);
+    max-width: 355px;
+  }
+
+  &__inner{
+    background-color: @white;
+    padding-bottom: 50px;
+  }
+
+  &:last-child{
+    display: none;
+
+    @media (min-width: @screen-lg){
+      display: block;
+    }
+  }
 }
