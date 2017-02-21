@@ -62,19 +62,20 @@ $(document).ready(function(){
     slidesToShow: 1
   });
 
- $('#promo-big').slick({
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  arrows: false,
-  fade: true,
-  asNavFor: '#promo-thumbs'
-});
-$('#promo-thumbs').slick({
-  slidesToShow: 7,
-  slidesToScroll: 1,
-  asNavFor: '#promo-big',
-  dots: false,
-  centerMode: true,
-  focusOnSelect: true
-});
+  $('#promo-big').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    asNavFor: '#promo-thumbs'
+  });
+  $('#promo-thumbs').slick({
+    slidesToShow: 7,
+    slidesToScroll: 1,
+    asNavFor: '#promo-big',
+    dots: false,
+    // centerMode: true,
+    accessibility: false,
+    focusOnSelect: true
+  });
 })
