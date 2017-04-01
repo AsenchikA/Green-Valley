@@ -1,8 +1,11 @@
 gh-pages:
 
 https://asenchika.github.io/Green-Valley/
+
 https://asenchika.github.io/Green-Valley/room_list.html
+
 https://asenchika.github.io/Green-Valley/single_room.html
+
 https://asenchika.github.io/Green-Valley/booking.html
 
 При клонировании репозитория:
