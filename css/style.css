@@ -1458,19 +1458,19 @@ body {
   margin: 0 auto;
 }
 .kind-advantages__item--S:before {
-  background: url('../../img/kind-advantages--S.png') no-repeat;
+  background: url('../img/kind-advantages--S.png') no-repeat;
 }
 .kind-advantages__item--rooms:before {
-  background: url('../../img/kind-advantages--rooms.png') no-repeat;
+  background: url('../img/kind-advantages--rooms.png') no-repeat;
 }
 .kind-advantages__item--beds:before {
-  background: url('../../img/kind-advantages--beds.png') no-repeat;
+  background: url('../img/kind-advantages--beds.png') no-repeat;
 }
 .kind-advantages__item--bath:before {
-  background: url('../../img/kind-advantages--bath.png') no-repeat;
+  background: url('../img/kind-advantages--bath.png') no-repeat;
 }
 .kind-advantages__item--wf:before {
-  background: url('../../img/kind-advantages--wi-fi.png') no-repeat;
+  background: url('../img/kind-advantages--wi-fi.png') no-repeat;
 }
 .booking-kind__inner {
   position: relative;
