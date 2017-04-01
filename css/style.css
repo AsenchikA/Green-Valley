@@ -1165,10 +1165,10 @@ body {
   background-repeat: no-repeat;
 }
 .route-item--bus:before {
-  background-image: url('../../img/route--bus.png');
+  background-image: url('../img/route--bus.png');
 }
 .route-item--train:before {
-  background-image: url('../../img/route--train.png');
+  background-image: url('../img/route--train.png');
 }
 .rooms-promo {
   background: url('../img/rooms-promo.jpg') no-repeat;
@@ -1538,14 +1538,14 @@ body {
   color: transparent;
 }
 .booking-person__input--done {
-  background: url('../../img/form-checked.png') no-repeat;
+  background: url('../img/form-checked.png') no-repeat;
   background-position: 20px center;
 }
 .booking-person__input--done.error {
   background: none;
 }
 .booking-person__input.error {
-  background: url('../../img/form-error.png') no-repeat;
+  background: url('../img/form-error.png') no-repeat;
   background-position: 20px center;
 }
 .booking-person__comment {
@@ -2047,7 +2047,7 @@ body {
     height: 22px;
     top: 10px;
     right: 20px;
-    background: url('../../img/room-gallery__zoom.png') no-repeat;
+    background: url('../img/room-gallery__zoom.png') no-repeat;
   }
   .room-info{
     -ms-flex-preferred-size: 50%;
